@@ -1,0 +1,17 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.zzjddg.jwdp.core.test.TestMapper">
+    <resultMap type="cn.zzjddg.jwdp.core.test.Test" id="test">
+        <id column="id" property="id"/>
+        <result column="str" property="str"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="test">
+        SELECT
+          *
+        FROM
+          test
+    </select>
+</mapper>
